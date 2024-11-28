@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>les types en Javascript</title>
+</head>
+<body>
+    <script>
+        /*
+        il esxite plusieurs types de valeur, que l'on puet assiger à nos variable 
+        -> les chaines de caractères (string)=> phrase,  entre guillemnts sim^ple ou doubles
+        _-> nombres : 5, 10, 12.8
+        -> booléen (boolean) => true ou false
+        ->tableau (array) => ["Julien ", 10]
+        -> null
+        ->classe
+        ->objets
+        ->fonction
+        */
+    //    Type STRAING
+    // nous pouvons inintialiser une chaine de caractère de plusieursfaçon :
+    // avec des guillemnt doubles (doubles qontes):
+    let chaine = "test";
+    // console.log(chaine)
+    // avec des guillemnt simple (simple quotes):
+    let chaines2 = "test2"
+    // console.log  (typeof chaines2, chaine2);
+    //  En JS la convantion de nommage est le "camelcase" : chague nouveau mot de votre variables deoive être en majuscule 
+    let montext = "voici une phrase écraite dans un double quote";
+    console.log(montext);
+    let montext2= "voici une phrase écraite dans un double quote ajourd'hui";
+    let montext3 ='Je sors losqu\il fait beaut';
+    // l'antislash permet d'échaper un caractère dans 
+     // avec le prifix ou le mot "LET" je peux changer la valeur de ma variables 
+     console.log(montext3);
+    // avec backquotes '' (ALT GR + 7)
+    let bienvenu = `Aujourd'hui c'est l'arrivé de Kader`;
+    // console.log(bienvenu);
+    const PRENOM = "Kader";
+    bienvenu = `Aujourd'hui c'est l'arrivé de ${PRENOM}`;
+    console.log(bienvenu);
+    let montexte4 = `je sors avec losrqu'il fait beaut`
+    // console.log(bienvenu):
+
+
+
+
+    // -------------------------type NUMBER---------------------------------
+    let chiffre =55;
+    console.log(chiffre);
+    
+    let negatif = -55; 
+    let decimal = 5.5; 
+    </script>
+    
+
+</body>
+</html>
