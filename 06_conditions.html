@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les conditions en JS</title>
+</head>
+<body>
+    <script>
+        // conditions et opérateur de comparision
+        document.write(" <h2>Opérateur de comparision pour strcteure conditionnelle </h2>")
+        /* 
+        Opérateur de comparision pour strcteure conditionnelle
+        >strictement supérieur
+        < strictemnt inférieur 
+        >= supérieur ou égale
+        <= inférieur ou égale 
+        == pour faire une comparision de valeur -> il permet de vrifiéer que les  VALEUR de 2 variable sont indentiques
+        === pour une comparision de valeur et de type -< signifie "strictement égale à" -> il  permet dee vérifier le valeur etle type (string, number...) 
+        != diférent de , en valeur 
+        !==strictement différent de (valeur et type)
+
+        
+
+        */
+       let br = "<br>";
+
+        let nbr1, nbr2;
+        nbr1 = 1;
+        nbr2 = 2;
+
+        document.write(nbr1 > nbr2); // false
+
+        document.write(br);
+
+        document.write(nbr1 < nbr2, br); //true
+
+        document.write(nbr1 >= nbr2, br); //false
+
+        document.write(nbr1 <= nbr2, br); //true
+
+        let nbr3, nbr4;
+        nbr3 = 1;
+        nbr4 = "1";
+        document.write(nbr3 == nbr4, br); //true
+        document.write(nbr3 === nbr4, br); //false
+
+        document.write("<h2> Opérateurs loguques </h2>");
+
+        /*
+        Opérateur logique
+        AND -> &&
+        OR -> ||
+        NOT -> !
+
+        */
+
+        document.write("<h3>Opérateur AND ->&& </h3>")
+        /*
+        l'opérateur AND -> && : évalu le résultat en TRUE
+         si les expression testées sont TRUE. 
+         si l'une
+        */
+
+        document.write(true && true, br); //true
+        document.write(true && false, br); //false
+        document.write(false && false, br); //false
+        /* 
+        (A) && (B)
+        => si A et FAUX "Et" B est vari ça ampliqiue le résultat et faux
+        si A et VRAI "Et" B est faux ça ampliqiue le résultat et faux
+        si A et FAUX "Et" B est faux ça ampliqiue le résultat et faux
+        si A et VRAI "Et" B est VRAI ça ampliqiue le résultat et VRAI
+        */
+
+
+
+        document.write("<h3>Opérateur OR ->|| </h3>")
+        // ********* Opérateur OR -> || *********
+        // Opérateur OR -> ||  :  évalu le résultat en TRUE si au moins une  deux expression ets TRUE.
+        // si les  deux expression sont false alors le srésultat ets FALSE.
+
+        document.write(false && false, br); //false
+        document.write(true && false, br); //ture
+        document.write(true && true, br); //false
+
+        /*
+        (C) || (D)
+        => si C et FAUX "Et" D est vari ça ampliqiue le résultat et faux
+        si C et VRAI "Et" D est faux ça ampliqiue le résultat et vrai
+        si C et FAUX "Et" D est faux ça ampliqiue le résultat et vrai
+        si C et VRAI "Et" D est VRAI ça ampliqiue le résultat et VRAI
+        */
+        document.write("<h3>Opérateur NOT -> </h3>")
+        /*
+        Opérateur  Opérateur NOT -> : il trensforme ce qui est TRUE en FASE, et ce qui est FALSE  en TRUE 
+
+        */
+
+        document.write(!true, br) //false
+        document.write(!false, br) //ture
+
+
+        document.write("<h2> Structeur conditionnelle if, else if, else  </h2>");
+        // ---------------------
+                //   SYNTAXE
+        // ---------------------
+
+//         if(condition ) {
+
+//             // code excuté si la condiotion est vari 
+
+//         } 
+//         else {
+
+//             // code excuté si la condiotion est fausse
+
+//         }
+
+//         if(condition1) {
+
+// // code excuté si la condiotion est vari 
+
+// } 
+// else if(condition2) {
+
+// // code excuté si la condiotion est vrai
+
+// }
+// else{
+
+    // code excuté si  tous les autres condiotion sont fausse
+    
+
+//  --------------exemple ----------------
+
+let a, b, c;
+ a = 10; b = 5; c = 2;
+
+if(a > b ){ // si a est supérieur à b -> si cette condiition est TRUE alors renter dans ce bloc et excute  le code 
+    document.write("<p> a est bien supérieur à b  </p>");
+
+}
+
+else{ // sions, dans tous les auters  cas
+    document.write("<p> a est bien inférieur ou égale à b  </p>");
+
+}
+
+//  in avec AND (&&)
+if ((a > b ) && (b > c)) { // tyre && ture 
+    document.write("<p> ok pour les deux conditions </p>");
+
+
+}
+else {
+    document.write("<p> soit une ou de cet deux conditons ou les deux sont fausse  </p>");
+
+}
+// let a, b, c;
+//  a = 10; b = 5; c = 2;
+//  if avec OP (||)
+if ((a == 9) || (b < 9)) {
+    //false || true => true
+    document.write("<p> ok pour au mons l'une des deux conditions est vérifier true </p>");
+}
+else{
+    document.write("<p> les deux conditions sont false </p>");
+}
+// if / else if/ else
+if ((a== 8)){
+    // false 
+    document.write("<p>  a est éqale à 8 </p>");
+
+}
+ else if ((a != 10)){
+    // false 
+    document.write("<p>  a est diffrent de 10 </p>");
+ }
+ else{
+    document.write("<p>  tout le monde est faux </p>");
+
+ }
+
+
+
+
+
+// ------------------
+
+if ( a == 10){
+    //ture
+    document.write("<p>  a est égale à 10</p>");
+
+}else if  (a > b ) { // ture
+    document.write("<p>  a est supérieur  à b </p>");
+  
+}else{
+    document.write("<p>  tout le monde à faux </p>");
+
+
+}
+document.write("<hr>");
+// -------------------
+//  Avec que de if les coonditions sont tout excutés, et dés que l'une des condition est vrai le résultat est affiché
+if ( a == 10){
+    
+    document.write("<p>  a est égale à 10</p>");
+
+}
+if (a > b ){
+    document.write("<p>  a est supérieur  à b</p>");
+
+}
+
+if (a < b ){
+    document.write("<p>  a est inférieur à b </p>");
+
+}
+document.write("<hr>");
+
+
+//  if avec une variable false 
+let test = 3 < 1;  // false
+document.write(test);
+console.log(typeof test);
+if (!test ){
+    //  true
+    document.write("<p> j'excute le code  </p>");
+
+}
+
+document.write("<hr>");
+
+
+
+document.write("<h3> Condition ternaire </h63>");
+    //  la condition ternaire nous permet de faire une vérification mais sur  une selue ligne
+    let meteo = 'pluie';
+    document.write((meteo == 'pluie') ? "<p> prends un parapluie  </p>" : "<p> Met un short   </p>")
+    // est-ce que meteo est à égale à pluie ? Si oui, prends un parapluie : ELSE Met un short 
+
+    let monAge = 15;
+    let isMajeur;
+
+    isMajeur = (monAge >= 18) ? /* if*/ "<p> Vous êtez majeur</p>" : /* else*/"<p> Vous êtez mineur </p>"
+    document.write(isMajeur);
+
+
+    document.write("<hr>");a
+    // age < 13 -> Renter chez toi  petit
+    // age < 18 -> Tu n'ai pas le droit de boire 
+     // age >= 18 -> T'ai le droit de boire 
+
+     let droitBoire;
+     droitBoire = (monAge < 13) ? "<p> Vous êtez majeur</p>" : (monAge < 18) ? "<p> Tu n'as pas les droits de boire </p>" : "<p> Tu as les droits de boire </p>" 
+     document.write(droitBoire);
+
+    let age;
+    age = parseInt(prompt("Veuillez entrez votre âge :", 10));
+    //-------------------------IF / ELSE ------------------
+    if (inNan(age) || age <= 0  )  {
+        alert("Veillez zntrez un âge valide");
+
+    }else if (age < 13) {
+
+        alert("Tu es encore trop geune pour participer");
+        
+     } else if (age >= 13 && age < 18) {
+
+alert("Tu es encore trop geune pour participer");
+
+}else if (age >= 18 && age <= 30 ) {
+
+alert("Bienvenudans la catégorie jeune adulte !");
+
+}else{
+
+    alert("Merci pour votre interet, mais cette activité est réserver aux jeunes!");
+
+}
+
+// ----------------SWITCH / CASE -------------------------
+
+if (inNan(age) || age <= 0  )  {
+        alert("Veillez zntrez un âge valide");
+
+    }else {
+        switch (true){
+            case (age < 13):
+            alert("Tu es encore trop geune pour participer");
+            break;
+            case (age >= 13 && age < 18):
+            alert("il  es encore temps pour  pour participer");
+
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    // if(age < 13) {
+    //     alert("Tu es encore trop geune pour participé.");
+    // }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+    </script>
+    
+</body>
+</html>
