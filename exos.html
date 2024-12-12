@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,79 +12,355 @@
         }
     </style>
 </head>
+
 <body>
 
     <script>
-        // ----------EXO 1 - Déclaration des variables-------------
+        //     // ----------EXO 1 - Déclaration des variables-------------
 
-        // num qui contient le nombre 255
-      let num = 255;
-        // txt qui contient la chaîne de caractères 255
-        let txt = '255'
-        // bin (pour binaire ou binary) qui contient la valeur booléenne vraie
-       let bin = true;
-        // flt (pour float décimal ou flottant) qui contient la valeur 7,23
-       let flt = 7.23; 
-        // affichez les contenus des variables dans des console.log
-        num = 255;
-         txt = '255'
-         bin = true;
-        flt = 7.23;
-        console.log(num, txt, bin, flt);
-        console.log(typeof num, num);
-        console.log(typeof txt, txt);
-        console.log(typeof bin, bin);
-        console.log(typeof flt, flt);
-
-
-        // ------------EXO 2---------------------
-        // A)- Appliquez à num l'opérateur d'incrémentation ++ (ce qui doit donner 256)
-        num++;
-        console.log(num)
-        num++;
-        console.log(num)
-
-        // B)- Concaténez à la chaîne txt la chaîne suivante : " est ici une chaîne de caractères."
-        // et la concaténation dans un document.write
-        document.write(txt +' est ici une chaîne de caractères.');
-
-         // C)- Inversez la valeur logique de bin 
-         bin = false;
-         console.log(bin);
-         let bin2 = true;
-         console.log('bin2' + bin2);
-
-        //  Ajoutez à flt la valeur de num
-        flt = flt + num;
-        console.log(flt);
-        flt = flt += num;
-        console.log(flt);
-        console.log(num, txt, flt);
+        //     // num qui contient le nombre 255
+        //   let num = 255;
+        //     // txt qui contient la chaîne de caractères 255
+        //     let txt = '255'
+        //     // bin (pour binaire ou binary) qui contient la valeur booléenne vraie
+        //    let bin = true;
+        //     // flt (pour float décimal ou flottant) qui contient la valeur 7,23
+        //    let flt = 7.23; 
+        //     // affichez les contenus des variables dans des console.log
+        //     num = 255;
+        //      txt = '255'
+        //      bin = true;
+        //     flt = 7.23;
+        //     console.log(num, txt, bin, flt);
+        //     console.log(typeof num, num);
+        //     console.log(typeof txt, txt);
+        //     console.log(typeof bin, bin);
+        //     console.log(typeof flt, flt);
 
 
-        
+        //     // ------------EXO 2---------------------
+        //     // A)- Appliquez à num l'opérateur d'incrémentation ++ (ce qui doit donner 256)
+        //     num++;
+        //     console.log(num)
+        //     num++;
+        //     console.log(num)
+
+        //     // B)- Concaténez à la chaîne txt la chaîne suivante : " est ici une chaîne de caractères."
+        //     // et la concaténation dans un document.write
+        //     document.write(txt +' est ici une chaîne de caractères.');
+
+        //      // C)- Inversez la valeur logique de bin 
+        //      bin = false;
+        //      console.log(bin);
+        //      let bin2 = true;
+        //      console.log('bin2' + bin2);
+
+        //     //  Ajoutez à flt la valeur de num
+        //     flt = flt + num;
+        //     console.log(flt);
+        //     flt = flt += num;
+        //     console.log(flt);
+        //     console.log(num, txt, flt);
 
 
 
-         // --------------- EXO 3 -------------------
 
-        // num2 qui contient le nombre 23
-         let  num2 = 23;
-         txt2 = "33";
-        console.log(num2, txt2);
-        console.log(num2 + txt2);
-        // on ne peut pas addiyionner une string et un number
-        txt2 = Number(txt2);
-        console.log(num2 * txt2);
-         // pour additionner une string et un number
-        // txt2 qui contient la chaîne de caractère 33
-        // Affichez le résultat de txt2 + num2 avec console.log
-        // Affichez le résultat de num2 + txt2 avec console.log
+
+
+        //      // --------------- EXO 3 -------------------
+
+        //     // num2 qui contient le nombre 23
+        //      let  num2 = 23;
+        //      txt2 = "33";
+        //     console.log(num2, txt2);
+        //     console.log(num2 + txt2);
+        //     // on ne peut pas addiyionner une string et un number
+        //     txt2 = Number(txt2);
+        //     console.log(num2 * txt2);
+        //      // pour additionner une string et un number
+        //     // txt2 qui contient la chaîne de caractère 33
+        //     // Affichez le résultat de txt2 + num2 avec console.log
+        //     // Affichez le résultat de num2 + txt2 avec console.log
+
+
+        // Exercice 3 : Devinez le nombre
+        // Objectif : Travailler avec if/else pour vérifier plusieurs conditions.
+        // Enoncé :
+        //     // 1. Demandez à l'utilisateur :
+        // ○ Un premier nombre (prompt).
+        // ○ Un deuxième nombre (prompt).
+        // ○ Une opération à ectuer (prompt avec les choix : "+", "-", "*", "/").
+
+        // 2. Utilisez une série de if/else pour ectuer l'opération demandée.
+
+        // 3. Affichez le résultat avec une alert.
+
+        // Exemple :
+        // Si l'utilisateur entre :
+        // ● Nombre 1 : 10
+        // ● Nombre 2 : 5
+        // ● Opération : "*"
+        // Alors l'alerte affiche :
+
+        // "Le résultat de 10 * 5 est 50."
+        // ----------------------------   Solutions   -------------------------
+        //  exxrcice 1 
+        let str1, str2, str3, n1, n2, res;
+
+        str1 = prompt("Veuillez saisir le 1er nombre : ");
+        n1 = parseFloat(str1.replace(",", "."));
+        str2 = prompt("Veuillez saisir le 2ème nombre : ");
+        n2 = parseFloat(str2.replace(",", "."));
+        str3 = prompt("Veuillez saisir l'operation parmi : + - * ou / : ");
+
+        if (isNaN(n1) || isNaN(n2)) {
+            alert("Veuillez entrer un nombre valide");
+        }
+        else if (str3 === "+") {
+            res = n1 + n2;
+            alert(`Le résultat de ${n1} ${str3} ${n2} est ${res}.`);
+        } else if (str3 === "-") {
+            res = n1 - n2;
+            alert(`Le résultat de ${n1} ${str3} ${n2} est ${res}.`);
+        }
+        else if (str3 === "*") {
+            res = n1 * n2;
+            alert(`Le résultat de ${n1} ${str3} ${n2} est ${res}.`);
+        }
+        else if (str3 === "/") {
+            if (n2 == 0) {
+                alert("Vous ne pouvez pas diviser par zéro !");
+            }
+
+            else {
+                res = n1 / n2;
+                alert(`Le résultat de ${n1} ${str3} ${n2} est ${res}.`);
+            }
+        }
+
+
+
+        // --------- Exercice 3 : Travailler avec if/else pour vérifier plusieurs conditions ----------
+        //   mon nombre secret
+        const numberSecret = 6;
+        //   à l'utilisateur de deviner
+        // la fonction parseInt()  renvoie un entier
+        let devine = parseInt(
+            prompt("Deviner le nombre secret (entre 1 et 10) :")
+        );
+        if (devine === numberSecret) {
+            alert("Bravo, vous avez trouvé le nombre !");
+        } else if (devine < numberSecret) {
+            alert("Trop petit !");
+        } else {
+            alert("Trop grand !");
+        }
+
+
+        // Exercice 4 : Système de notation
+        // Objectif : Utiliser switch pour gérer plusieurs cas.
+        // Enoncé :
+        // 1. Demandez à l'utilisateur de saisir une note (entre 0 et 20).
+        // 2. Utilisez un switch pour a
+
+        // cher des messages en fonction de la note :
+
+        // ○ Entre 0 et 10 : "Insuffisant".
+        // ○ Entre 11 et 14 : "Passable".
+        // ○ Entre 15 et 17 : "Bien".
+        // ○ Entre 18 et 20 : "Excellent".
+        // ○ En dehors de cet intervalle : "Note invalide !".
+        // Switch note
+
+        let note;
+        note = prompt('Quelle est votre note ? ');
+
+        note = parseFloat(note.replace(',', '.'));
+        // note = Number(note.replace(',', '.'));
+
+
+        switch (true) {
+            case note >= 0 && note <= 10:
+                alert('Insuffisant');
+                break
+            case note > 10 && note < 15:
+                alert('Passable');
+                break
+            case note >= 15 && note <= 17:
+                alert('Bien !');
+                break
+            case note > 17 && note <= 20:
+                alert('Excellent !');
+                break
+            default:
+                alert('Note invalide !');
+        }
+
+
+
+
+
+
+        // Exercice 5 : Quel est votre plat préféré ?
+        // Objectif : Utiliser switch pour gérer des réponses spécifiques.
+        // Enoncé :
+        // 1. Demandez à l'utilisateur : "Quel est votre plat préféré ? (pizza,
+        // sushi, steak, salade)".
+        // 2. Utilisez un switch pour a
+
+        // cher une alerte en fonction du choix :
+
+        // ○ "Pizza : un excellent choix pour les amateurs de fromage
+        // !".
+        // ○ "Sushi : une option saine et délicieuse !".
+        // ○ "Steak : parfait pour les amateurs de viande !".
+        // ○ "Salade : un choix équilibré et léger !".
+        // 3. Si l'utilisateur entre autre chose, a
+        // chez :
+        // "Désolé, je ne connais pas ce plat.".
+        let platPref = prompt("Quel est votre plat préféré? (pizza, sushi, steak, salade)")
+        platPref = platPref.toLowerCase();
+        console.log(platPref);
+
+        switch (platPref) {
+            case 'pizza':
+                alert("Pizza : un excellent choix pour les amateurs de fromage!");
+                break;
+            case 'sushi':
+                alert("Sushi : une option saine et délicieuse !");
+                break;
+            case 'steak':
+                alert("Steak : parfait pour les amateurs de viande !");
+                break;
+            case 'salade':
+                alert("Salade : un choix équilibré et léger !");
+                break;
+            default:
+                alert("Désolé, je ne connais pas ce plat.");
+
+
+        }
+
+
+        //         Exercice 6 : Test de personnalité
+        // Objectif : Combiner if/else et switch.
+        // Enoncé :
+        // 1. Demandez à l'utilisateur de choisir une couleur préférée parmi : "rouge",
+        // "bleu", "vert".
+        // 2. Utilisez un switch pour a
+
+        // cher un message correspondant :
+        // ○ "Rouge : Vous êtes passionné et dynamique !".
+        // ○ "Bleu : Vous êtes calme et réfléchi.".
+        // ○ "Vert : Vous aimez la nature et la tranquillité.".
+        // 3. Si l'utilisateur ne choisit pas une couleur valide, a
+
+        // chez une alerte :
+
+        // "Couleur non reconnue !".
+        // 4. Ajoutez une deuxième condition :
+        // ○ Si l'utilisateur choisit "bleu" et qu'il est âgé de moins de 20 ans, a
+        // chez
+
+        // une alerte supplémentaire :
+        // "Les jeunes aiment aussi le bleu !".
+
+        // Demander à l'utilisateur de choisir une couleur préférée
+        let couleur = prompt("Choisissez une couleur parmi : (rouge, bleu, vert)").toLowerCase(); // Conversion en minuscule pour éviter les erreurs de saisie
+
+        // Demander à l'utilisateur son âge
+        let age = parseInt(prompt("Quel est votre âge ?"), 10);
+
+        // Utiliser un switch pour afficher le message correspondant
+        switch (couleur) {
+            case "rouge":
+                alert("Rouge : Vous êtes passionné et dynamique !");
+                break;
+            case "bleu":
+                alert("Bleu : Vous êtes calme et réfléchi.");
+                // Vérification de l'âge pour le message supplémentaire
+                if (age < 20) {
+                    alert("Les jeunes aiment aussi le bleu !");
+                }
+                break;
+            case "vert":
+                alert("Vert : Vous aimez la nature et la tranquillité.");
+                break;
+            default:
+                alert("Couleur non reconnue !");
+        }
+
+
+        //         Exercice 7 : Jeu du chiffre chanceux
+
+        // Objectif : associer prompt, if/else, et une structure switch.
+        // Enoncé :
+        // 1. Demandez à l'utilisateur un chi
+
+        // re entre 1 et 5 via prompt.
+        // 2. Utilisez un switch pour donner une prédiction amusante :
+        // ○ 1 : "Aujourd'hui est votre jour de chance !".
+        // ○ 2 : "Un ami vous rendra visite bientôt.".
+        // ○ 3 : "Soyez prudent dans vos choix aujourd'hui.".
+        // ○ 4 : "Une surprise vous attend au coin de la rue.".
+        // ○ 5 : "Restez positif, le meilleur est à venir !".
+        // 3. Si l'utilisateur entre un chi
+
+        // re hors de cet intervalle, a
+        // chez :
+        // "Chiffre invalide. Essayez entre 1 et 5.". 
+
+      let chiffre = parseInt(
+        prompt("Veuillez entrer un chiffre entre 1 et 5 :")
+      );
+     
+      switch (chiffre) {
+        case 1:
+          alert("Aujourd'hui est votre jour de chance !");
+          break;
+        case 2:
+          alert("Un ami vous rendra visite bientôt.");
+          break;
+        case 3:
+          alert("Soyez prudent dans vos choix aujourd'hui.");
+          break;
+        case 4:
+          alert("Une surprise vous attend au coin de la rue.");
+          break;
+        case 5:
+          alert("Restez positif, le meilleur est à venir !");
+        default:
+          alert("Chiffre invalide. Essayez entre 1 et 5.");
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
     </script>
 
-    
+
 </body>
+
 </html>

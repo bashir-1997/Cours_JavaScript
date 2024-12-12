@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Les boucles</title>
+</head>
+
+<body>
+    <script>
+        // une boucle : est une strcutrue conditionelle qui permet  de répéter une certain nombre de ponts du code 
+        /*
+        il existe deux principeau type ddu boucles :
+        1- la boucles "for" permet le répéter le code losrque l'on sait d'ance commib de fois il faudra le répéter
+
+        2- la bocule "wite"permet de répéter du code  autant de fpois qu'il  faut pour qu'une coditon ne soit plus vraie
+    
+        
+        */
+
+        document.write('<h1> la boucle "FOR" </h1>');
+
+        /*
+        synteate
+        for (3 argument : intialisation; condition de continuation ; incrémentatio n ){
+             code executé";
+        }
+             
+        
+        */
+        for (let i = 0; i <= 10; i++) {
+            document.write(`<p> instruction executée ${i} </p>`);
+
+        }
+        /*
+        i =0 j'incialise le départ de la boucle à 0 
+        i <= 10 -> tant que la valeur de i  est inférieur ou égale à 10 
+        i++   -> j'incrément un tour de boucle 
+ 
+ 
+ 
+        En gros je donne l'instruction de faire  un tour de boucle suppélemntaire tant que  la valeur i est inférieur ou égale à 10
+ 
+        
+        */
+
+        document.write("<hr>");
+        for (let i = 0; i <= 10; i += 2) {
+            document.write(`<p> je compte deux par deux  ${i} </p>`);
+        };
+
+        // document.write("<hr>");
+        // for(let bashir = 27; bashir<= 15; bashir ++){
+        //     document.write(`<p> instruction executée ${bashir} </p>`);
+        // }
+
+
+
+        //  je  boucle sur un tableau 
+        let users = ["Hawa", "Andrea", "Alpha", "Roger"];
+        console.log(users[0]);
+
+        for (let i = 0; i < users.length; i++) {
+            document.write(`<p>${users[i]}</p>`);
+
+        }
+
+
+        document.write(`<h2> la boucle "while" </h2>`);
+        /*
+           syntaxe 
+
+
+           while(expression qui vaut ture ou false){
+           tant que l'expressions vaut true, code à executer }
+
+        
+        */
+        document.write("<hr>");
+        let i = 0; // j'initialise une variable à 0
+        while (i <= 5) {//tant que i est inférieur ou égale à 5
+            document.write(i + '/');
+
+
+            //   Attention à ne pas oublier l'incrementation 
+            i++; // à chaque tour de la boucle, j'incrément la variable i 
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

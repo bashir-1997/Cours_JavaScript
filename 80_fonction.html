@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Les Fonctions en JS</title>
+</head>
+
+<body>
+    <script>
+        const BR = '<br>';
+        document.write('<h2> Fonction prédéfinies et fonction utilisateurs </h2>');
+        //   le JS posséde des fonctions. Ce sont des morceaux de codes encapsulés qu'on appel au  besion pour excuter une action  précise.On distinque les fonctions préféfinies et le fonctipons utilisateurs
+
+
+        document.write('<h3> Fonction prédéfinies </h3>');
+
+        //----- 1- fonction préfédifinies sur les nombres -------
+        let testNumber = 1.5555555;
+        document.write(typeof testNumber);
+
+        let number = testNumber.toFixed(2);
+        document.write(typeof number); // la foction tofixed() défini un numre de chiffre après la virqule et elle retourne une chaines de caratère(string)
+        document.write(typeof parseFloat(number));
+
+
+        document.write("br");
+        // let testMath = Math.pow(2,2); //puissance
+        // let testMath = Math.PI; //3.14
+        // let testMath = Math.floor(1.9); //charcher le numbre entier inférieur 
+        // let testMath = Math.ceil(1.9); //2-> charcher 
+        // let testMath = Math.max(10,8,14,50,6);
+        let testMath = Math.random(); //retourne un numbre décimal entre 0 et 1, qui change à chaque rafraichement  de la page. C'est un number complétement aléatroire
+        // console.log(testMath);
+
+        // je veux un  numbre entier entre 0 et 100 de façon aléatoire 
+        let nombre = Math.random() * 100;
+        document.write(BR + nombre + '<hr>');
+
+
+        //----- 2- fonction préfédifinies sur des chaines de caractères-------
+        let phrase = "salut c'est bashir";
+        document.write(phrase.length + '<br>'); //pour retoune le nombre  de caractère 
+        document.write(phrase.indexOf("c") + '<br>'); // 2 = retourne à la position de largument passé en paramétre de la foction indexOF()
+        document.write(phrase.toLowerCase() + '<br>'); //retourne "salut Bashir"
+        document.write(phrase.toUpperCase() + '<br>');
+
+
+        let phrase2 = '             du texte             ';
+        phrase2 = phrase2.trim();// enleve tous les espaces avant et après 
+        console.log(phrase2.trim());
+
+
+        let phrase3 = "métro, boulot, dodo";
+        console.log(phrase3.split(';')); //retoune un tableau à partir d'une chaines de caractère 
+
+        document.write('<h3> Fonction prédéfinies et utilisatreurs </h3>');
+
+
+        document.write('<h3> Fonction Utilisateurs  </h3>');
+        // in des grand prinicipe ne programmations est d'avoir un   code DRY 
+
+
+
+
+        function maFonction() {
+            document.write(`<p> ma premeier foncation </p>`);
+        }
+        // /appel (exécution de la fonction )
+        maFonction();
+
+        // Autre syntaxte pour déclarer une foanctions, elle consisite une fonction à une variable
+
+        let direBonjour = function () {
+            document.write(`<p> Bonjour tou le monde  </p>`);
+        }
+        direBonjour();
+        // fonction avec paramètre
+        function direBonjour1(prenom) {
+            document.write(`<p> Bonjour ${prenom} </p>`);
+
+
+        }
+        direBonjour1('Andrea')
+        direBonjour1('Alpha')
+
+        function direBonjour2(nom, age) {
+            document.write(`<p> Bonjour ${nom}, tu as ${nom} </p>`);
+        }
+        direBonjour2('Yacine', 26);
+        direBonjour2('Alexandre', 60);
+
+
+        function helloWord(USA, ENGLANDE) {
+            document.write(`<p> Bonjour ${USA}, are welcome ${ENGLANDE} </p>`);
+        }
+        helloWord('you', 'in',);
+
+
+
+
+
+
+        function d(content, balise) {
+            if (balise === 1) {
+                document.write(`<h2>${content} </h2>`);
+            } else {
+                document.write(`<p>${content} </p>`);
+
+            }
+        }
+        d('titre', 1);
+
+        function calculAge(anneeActuelle, anneeNaissance) {
+            return anneeActuelle - anneeNaissance;
+
+        }
+        let monAge = calculAge(2024, 1997);
+        d(monAge, 1);
+
+        // il existe une autre façon pour  écrire ou déclarer une fonction 
+        let maFonction2 = (x, y) => {
+            d(x + y);
+        }
+        maFonction2(5, 2);
+        // ------------------------
+        // la foction fléchée ne peut pas être excutée avan-t initialisation 
+        // la fonction fléchée : les accolades ne sont oas nécessaire pour une seule instruction 
+        // fléchée => sert imliciement de RETURN
+
+
+        let maFonction3 = (f, r) => f * r;
+        let produit = maFonction3(6, 5);
+        d(produit)
+
+        document.write("<hr>");
+
+        d('la portée des variables', 1);
+        /*
+        // En JS, la porée des varaiables  définine à quel dans le code une variable  çets accessible.
+        Il existe principleement  trois type  de porée :
+        portée  globale (globale scuope)
+        portée local(ou fonctionnelle )(function scuope)
+        
+        */
+        let message = "Bonjour, monde !"; //variable globale
+        function afficherMessage() {
+            d(message); // Accès à la variable globale
+        }
+        afficherMessage(); //Affiche : Bonjour monde! -> Accè également à la variiable globale
+        //    dans cette exmple le variable messae est défini en dehors de la funtion elle donc accessible depuis la function qui s'appelle "afficherMessage" et meêm depuis le reste du progtramme,
+        // 2- portée local ou fo,nctionelle (function scupe)
+
+
+        function saluer() {
+            var prenom = "Delma";
+            let nom = "Leta"; // est une variable local à la fontion "car elle déclarer dans la fontion "
+            d(`salut ${nom} ${prenom}`)
+        }
+        saluer(); //elle affiche salut Delma
+        // console.log(nom);// parcontre ça affiche : une rereur nom in not defiend
+        // Ici la variable "nom" est déclaer dans la fontion "saluer()". Elle  accessible qu'à l'intérieur de cette fontion .toutes tentative d'y accéder en deors de la fontion provoque une erreur
+
+        // 2-porée de bloc (block Scoupe)
+        // les déclartion de variable avec "let "et "const" repectrent la porée de
+        if (true) {
+            let x = 10;
+            const y = 20;
+            console.log(x);// elle afgice  : 10
+            console.log(y); //elle affice : 20
+        }
+        // console.log(x);// erreur : is not defiend
+        // console.log(y);// erreur : is not defiend
+        //  dans cette exemple x et y sont déclaer avec "let" et "const" dans le bloc "if" il ne sont accessibles que dans ce bloc
+
+
+        // exemple avec VAR
+
+        if (true) {
+            var z = 30;
+            console.log(z); //affiche : 30
+
+        }
+        console.log(z); //elle affiche : 30 -> car "VAR" ignore la porée de bloc
+        //Avec "VAR" ler variable z est accessible en dehors du bloc "if", car " VAR" n,est pas limité par la porée de bloc mais uniquement par la potée de fonction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
